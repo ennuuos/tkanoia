@@ -55,4 +55,4 @@ class Clearances:
 
 
 
-    ranks = [Infrared, Red, Orange, TonyHawkProSkater3, Yellow, Green, Blue, Indigo, Violet, Ultraviolet]
+    ranks = [Infrared, Red, Orange, Yellow, Green, Blue, Indigo, Violet, Ultraviolet]

@@ -1,109 +1,113 @@
+
+
 class Skills:
+    @classmethod
     def __init__(self):
 
-        self.action = Action()
-        self.knowledge = Knowledge()
-        self.secret = Secret()
+        self.action = Skills.Action()
+        self.knowledge = Skills.Knowledge()
+        self.secret = Skills.Secret()
 
     class Action:
         def __init__(self):
 
-            self.management = Management()
-            self.stealth = Stealth()
-            self.violence = Violence()
+            self.management = Skills.Action.Management()
+            self.stealth = Skills.Action.Stealth()
+            self.violence = Skills.Action.Violence()
 
 
 
         class Management:
             def __init__(self):
 
-                self.bootlicking = Bootlicking()
-                self.chutzpah = Chutzpah()
-                self.congames = Con()
-                self.hygiene = hygiene()
-                self.interrogation = interrogation()
-                self.moxie = moxie()
-                self.oratory = Oratory()
+                self.bootlicking = 7
+                self.chutzpah = 7
+                self.congames = 7
+                self.hygiene = 7
+                self.interrogation = 7
+                self.moxie = 7
+                self.oratory = 7
 
         class Stealth:
             def __init__(self):
 
-                self.concealment = Concealment()
-                self.disguise = Disguise()
-                self.highalert = High()
-                self.securitysystems = Security()
-                self.shadowing = Shadowing()
-                self.sleight = Sleight()
-                self.surveilance = Surveilance()
+                self.concealment = 7
+                self.disguise = 7
+                self.highalert = 7
+                self.securitysystems = 7
+                self.shadowing = 7
+                self.sleight = 7
+                self.surveilance = 7
 
         class Violence:
-            def __init__(start):
+            def __init__(self):
 
-                self.agility = Agility()
-                self.energy = Energy()
-                self.field = Field()
-                self.fine = Fine()
-                self.hand = Hand()
-                self.projectie = Projectile()
-                self.thrown = Thrown()
-                self.unarmed = Unarmed()
-                self.vehicular = Vehicular()
+                self.agility = 7
+                self.energy = 7
+                self.field = 7
+                self.fine = 7
+                self.hand = 7
+                self.projectie = 7
+                self.thrown = 7
+                self.unarmed = 7
+                self.vehicular = 7
 
     class Knowledge:
         def __init__(self):
 
-            self.hardware = Hardware()
-            self.software = Software()
-            self.wetware = Wetware()
+            self.hardware = Skills.Knowledge.Hardware()
+            self.software = Skills.Knowledge.Software()
+            self.wetware = Skills.Knowledge.Wetware()
 
-            class Hardware()
+        class Hardware:
             def __init__(self):
 
-                self.bot = Bot()
-                self.chemical = Chemical()
-                self.electronic = electronic()
-                self.habitat = Habitat()
-                self.mechanical = Mechanical()
-                self.nuclear = Nuclear()
-                self.vehicle = Vehicle()
-                self.weapon = Weapon()
+                self.bot = 7
+                self.chemical = 7
+                self.electronic = 7
+                self.habitat = 7
+                self.mechanical = 7
+                self.nuclear = 7
+                self.vehicle = 7
+                self.weapon = 7
 
-            class Software:
-                def __init__(self):
+        class Software:
+            def __init__(self):
 
-                    self.bot = Bot()
-                    self.c = C()
-                    self.dataA = DataA()
-                    self.dataS = DataS()
-                    self.financial = Financial()
-                    self.hacking = Hacking()
-                    self.operating = Operating()
-                    self.vehicle = Vehicle()
+                self.bot = 7
+                self.c = 7
+                self.dataA = 7
+                self.dataS = 7
+                self.financial = 7
+                self.hacking = 7
+                self.operating = 7
+                self.vehicle = 7
 
-            class Wetware()
-            def __init__(elf):
+        class Wetware:
+            def __init__(self):
 
-                self.bioS = BioS()
-                self.bioW = BioW()
-                self.cloning = Cloning()
-                self.medical = Medical()
-                self.oudoor = Outdoor()
-                self.pharmatherapy = Pharmatherapy()
-                self.Psychtherapy = Psychotherapy()
-                self.suggestion = Suggestion()
+                self.bioS = 7
+                self.bioW = 7
+                self.cloning = 7
+                self.medical = 7
+                self.oudoor = 7
+                self.pharmatherapy = 7
+                self.Psychtherapy = 7
+                self.suggestion = 7
 
     class Secret:
         def __init__(self):
-            self.uncommon = Uncommon()
-            self.unlikely = Unlikely()
-            self.unhealthy = Unhealthy()
+            self.uncommon = Skills.Secret.Uncommon()
+            self.unlikely = Skills.Secret.Unlikely()
+            self.unhealthy = Skills.Secret.Unhealthy()
 
-        class Uncommon()
-
-
-        class Unlikely()
+        class Uncommon:
+            pass
 
 
-        class Unhealthy()
+        class Unlikely:
+            pass
 
-    
+
+        class Unhealthy:
+            pass

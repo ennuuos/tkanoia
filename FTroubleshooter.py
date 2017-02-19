@@ -1,3 +1,4 @@
+from Tkinter import *
 
 
 class FTroubleshooter:
@@ -8,10 +9,10 @@ class FTroubleshooter:
         self.frame = Frame(master)
         self.frame.pack(fill = BOTH, expand = 1)
 
-        self.l_designation = Label(self.frame, troubleshooter.designation())
+        self.l_designation = Label(self.frame, text = self.troubleshooter.designation())
         self.l_designation.pack(fill=X)
 
-        self.l_player = Label(self.frame, troubleshooter.player)
+        self.l_player = Label(self.frame, text = troubleshooter.player)
         self.l_player.pack(fill=X)
 
         self.b_health = Button(self.frame, text = "Medical Status", fg="green")

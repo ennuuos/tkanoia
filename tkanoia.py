@@ -11,23 +11,10 @@ class App:
         self.frame = Frame(master)
         self.frame.pack(fill = BOTH, expand = 1)
 
-        t = Troubleshooter()
-
-        FTroubleshooter(master, t)
-
-
-        c = Clearances.Infrared.promote()
-
-        print c.color
+        FTroubleshooter(master, self.t)
 
     def initData(self):
-        # self.troubleshooters = [
-        #     Troubleshooter(),
-        #     Troubleshooter()
-        # ]
-        # self.troubleshooters[0].name = "CA"
-        # self.troubleshooters[0].clearance = 1
-        pass
+        self.t = Troubleshooter()
 
 root = Tk()
 app = App(root)
