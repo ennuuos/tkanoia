@@ -1,3 +1,5 @@
+from Skills import *
+
 class Troubleshooter:
     def __init__(self):
 
