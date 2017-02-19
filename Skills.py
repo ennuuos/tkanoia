@@ -81,7 +81,7 @@ class Skills:
                     self.vehicle = Vehicle()
 
             class Wetware()
-            def __init__(elf):
+            def __init__(self):
 
                 self.bioS = BioS()
                 self.bioW = BioW()
@@ -99,11 +99,9 @@ class Skills:
             self.unhealthy = Unhealthy()
 
         class Uncommon()
-
+            
 
         class Unlikely()
 
 
         class Unhealthy()
-
-    
