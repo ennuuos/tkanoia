@@ -2,22 +2,11 @@ from Enum import Enum
 
 class Health:
     Status = ('Okay', 'SNAFU', 'Wounded', 'Maimed', 'Down', 'Killed', 'Vaporised')
+    BodyPart = ('LHand', 'RHand', 'LArm', 'RArm', 'LLeg', 'RLeg', 'Loins', 'Chest', 'Misc')
     def __init__(self):
 
-
-        self.status = {
-            LHand : 0,
-            RHand : 0,
-            LArm : 0,
-            RArm : 0,
-            LLeg : 0,
-            RLeg : 0,
-            Loins : 0,
-            Misc : 0
-
-        }
-
-        print Status(self.status.LHand)
+        self.status = (0, 0, 0, 0, 0, 0, 0, 0, 0)
 
     def printStatus(self):
-        pass
+        for i, val in self.status:
+            print(BodyPart(i) +':', Status(val))
