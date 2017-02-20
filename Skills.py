@@ -20,6 +20,7 @@ class Skills:
         class Management:
             def __init__(self):
 
+                self.level = 7
                 self.bootlicking = 7
                 self.chutzpah = 7
                 self.congames = 7
@@ -31,6 +32,7 @@ class Skills:
         class Stealth:
             def __init__(self):
 
+                self.level = 7
                 self.concealment = 7
                 self.disguise = 7
                 self.highalert = 7
@@ -42,6 +44,7 @@ class Skills:
         class Violence:
             def __init__(self):
 
+                self.level = 7
                 self.agility = 7
                 self.energy = 7
                 self.field = 7
@@ -62,6 +65,7 @@ class Skills:
         class Hardware:
             def __init__(self):
 
+                self.level = 7
                 self.bot = 7
                 self.chemical = 7
                 self.electronic = 7
@@ -74,6 +78,7 @@ class Skills:
         class Software:
             def __init__(self):
 
+                self.level = 7
                 self.bot = 7
                 self.c = 7
                 self.dataA = 7
@@ -86,6 +91,7 @@ class Skills:
         class Wetware:
             def __init__(self):
 
+                self.level = 7
                 self.bioS = 7
                 self.bioW = 7
                 self.cloning = 7
@@ -97,17 +103,6 @@ class Skills:
 
     class Secret:
         def __init__(self):
-            self.uncommon = Skills.Secret.Uncommon()
-            self.unlikely = Skills.Secret.Unlikely()
-            self.unhealthy = Skills.Secret.Unhealthy()
-
-        class Uncommon:
-            pass
-
-
-        class Unlikely:
-            pass
-
-
-        class Unhealthy:
-            pass
+            self.uncommon = None
+            self.unlikely = None
+            self.unhealthy = None
