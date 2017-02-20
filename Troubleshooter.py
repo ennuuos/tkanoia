@@ -14,3 +14,10 @@ class Troubleshooter:
 
     def designation(self):
         return self.name + '-' + self.clearance.abbr + '-' + self.sector + '-' + str(self.clone)
+
+class Equipment:
+    def __init__(self):
+
+        self.personal = None
+        self.assigned = None
+        self.treasonous = None
