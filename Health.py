@@ -1,15 +1,23 @@
 from Enum import Enum
 
 class Health:
+    Status = ('Okay', 'SNAFU', 'Wounded', 'Maimed', 'Down', 'Killed', 'Vaporised')
     def __init__(self):
 
-        self.Status = ('Okay', 'SNAFU', 'Wounded', 'Maimed', 'Down', 'Killed', 'Vaporised')
 
-        self.LHand = 0
-        self.RHand = 0
-        self.LArm = 0
-        self.RArm = 0
-        self.LLeg = 0
-        self.RLeg = 0
-        self.Loins = 0
-        self.Misc = 0
+        self.status = {
+            LHand : 0,
+            RHand : 0,
+            LArm : 0,
+            RArm : 0,
+            LLeg : 0,
+            RLeg : 0,
+            Loins : 0,
+            Misc : 0
+
+        }
+
+        print Status(self.status.LHand)
+
+    def printStatus(self):
+        pass
