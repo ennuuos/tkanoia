@@ -1,5 +1,6 @@
 from Skills import Skills
 from Clearances import Clearances
+from Health import Health
 
 class Troubleshooter:
     def __init__(self):
@@ -10,7 +11,8 @@ class Troubleshooter:
         self.clone = 1
         self.player = "ERROR"
         self.skills = Skills()
+        self.health = Health()
 
 
     def designation(self):
-        return self.name + '-' + self.clearance.abbr + '-' + self.sector + '-' + str(self.clone)
+        return '{0}-{1}-{2}-{3}'.format(self.name, self.clearance.abbr, self.sector, str(self.clone))
