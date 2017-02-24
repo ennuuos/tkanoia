@@ -13,7 +13,7 @@ class Clearances:
         abbr = "IR"
         rank = 0
     class Red(Rank):
-        color = "red"
+        color = "red2"
         name = "Red"
         abbr = "R"
         rank = 1
@@ -23,7 +23,7 @@ class Clearances:
         abbr = "O"
         rank = 2
     class Yellow(Rank):
-        color = "yellow"
+        color = "yellow2"
         name = "Yellow"
         abbr = "Y"
         rank = 3
@@ -43,7 +43,7 @@ class Clearances:
         abbr = "I"
         rank = 6
     class Violet(Rank):
-        color = "violet"
+        color = "violet red"
         name = "Violet"
         abbr = "V"
         rank = 7

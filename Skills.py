@@ -1,108 +1,82 @@
 
 
 class Skills:
-    @classmethod
     def __init__(self):
+        self.groups = []
 
-        self.action = Skills.Action()
-        self.knowledge = Skills.Knowledge()
-        self.secret = Skills.Secret()
+        g = self.addGroup("Action")
+        t = g.addType("Management", 7)
+        t.addSkill("Bootlicking")
+        t.addSkill("Chutzpah")
+        t.addSkill("Con Games")
+        t.addSkill("Hygeine")
+        t.addSkill("Interrogation")
+        t.addSkill("Intimidation")
+        t.addSkill("Moxie")
+        t.addSkill("Oratory")
 
-    class Action:
-        def __init__(self):
 
-            self.management = Skills.Action.Management()
-            self.stealth = Skills.Action.Stealth()
-            self.violence = Skills.Action.Violence()
+        t = g.addType("Stealth", 7)
+        t.addSkill("Concealment")
+        t.addSkill("Disguise")
+        t.addSkill("High Alert")
+        t.addSkill("Security Systems")
+        t.addSkill("Shadowing")
+        t.addSkill("Sleight of Hand")
+        t.addSkill("Sneaking")
+        t.addSkill("Surveillance")
 
+        t = g.addType("Violence", 7)
+        t.addSkill("Agility")
+        t.addSkill("Energy Weapons")
+        t.addSkill("Demolition")
+        t.addSkill("Field Weapons")
+        t.addSkill("Fine Manipulation")
+        t.addSkill("Hand Weapons")
+        t.addSkill("Projectile Weapons")
+        t.addSkill("Thrown Weapons")
+        t.addSkill("Unarmed Combat")
+        t.addSkill("Vehicular Combat")
 
+        g = self.addGroup("Knowledge")
+        t = g.addType("Hardware", 7)
+        t.addSkill("Bot Ops & Maintenance")
+        t.addSkill("Chemical Engineering")
+        t.addSkill("Electronic Engineering")
+        t.addSkill("Habitat Engineering")
+        t.addSkill("Mechanical Engineering")
+        t.addSkill("Nuclear Engineering")
+        t.addSkill("Vehicle Ops & Maintenance")
+        t.addSkill("Weapon & Armor Maintenance")
 
-        class Management:
-            def __init__(self):
+        g = self.addGroup("Secret")
 
-                self.level = 7
-                self.bootlicking = 7
-                self.chutzpah = 7
-                self.congames = 7
-                self.hygiene = 7
-                self.interrogation = 7
-                self.moxie = 7
-                self.oratory = 7
+    def addGroup(self, name):
+        self.groups.append(Group(name))
+        return self.groups[-1]
 
-        class Stealth:
-            def __init__(self):
+class Group:
+    def __init__(self, name):
+        self.name = name
+        self.types = []
 
-                self.level = 7
-                self.concealment = 7
-                self.disguise = 7
-                self.highalert = 7
-                self.securitysystems = 7
-                self.shadowing = 7
-                self.sleight = 7
-                self.surveilance = 7
+    def addType(self, name, level):
+        self.types.append(Type(name, level))
+        return self.types[-1]
 
-        class Violence:
-            def __init__(self):
+class Type:
+    def __init__(self, name, level):
+        self.name = name
+        self.level = level
+        self.skills = []
 
-                self.level = 7
-                self.agility = 7
-                self.energy = 7
-                self.field = 7
-                self.fine = 7
-                self.hand = 7
-                self.projectie = 7
-                self.thrown = 7
-                self.unarmed = 7
-                self.vehicular = 7
+    def addSkill(self, name):
+        self.skills.append(Skill(name, self.level))
+        return self.skills[-1]
 
-    class Knowledge:
-        def __init__(self):
-
-            self.hardware = Skills.Knowledge.Hardware()
-            self.software = Skills.Knowledge.Software()
-            self.wetware = Skills.Knowledge.Wetware()
-
-        class Hardware:
-            def __init__(self):
-
-                self.level = 7
-                self.bot = 7
-                self.chemical = 7
-                self.electronic = 7
-                self.habitat = 7
-                self.mechanical = 7
-                self.nuclear = 7
-                self.vehicle = 7
-                self.weapon = 7
-
-        class Software:
-            def __init__(self):
-
-                self.level = 7
-                self.bot = 7
-                self.c = 7
-                self.dataA = 7
-                self.dataS = 7
-                self.financial = 7
-                self.hacking = 7
-                self.operating = 7
-                self.vehicle = 7
-
-        class Wetware:
-            def __init__(self):
-
-                self.level = 7
-                self.bioS = 7
-                self.bioW = 7
-                self.cloning = 7
-                self.medical = 7
-                self.oudoor = 7
-                self.pharmatherapy = 7
-                self.Psychtherapy = 7
-                self.suggestion = 7
-
-    class Secret:
-        def __init__(self):
-            self.uncommon = None
-            self.unlikely = None
-            self.unhealthy = None
+class Skill:
+    def __init__(self, name, level):
+        self.name = name
+        self.level = level
+        self.proficiency = 0
+        self.weakness = False
