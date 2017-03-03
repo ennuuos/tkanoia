@@ -64,8 +64,14 @@ class FTroubleshooterSkills:
             gFrame = LabelFrame(master, text = group.name, pady = 15, padx=5)
             gFrame.pack(fill=X)
             for t in group.types:
-                tFrame = LabelFrame(gFrame, text = t.name, pady = 15, padx=5)
+                tFrame = LabelFrame(gFrame, text = "{0} - {1}".format(t.name, t.level), pady = 15, padx=5)
                 tFrame.pack(side = LEFT, fill=Y, expand = 1)
+                tModFrame = Frame(tFrame)
+                tModFrame.pack(fill=X)
+                bLowerT = Button(tModFrame, text="-")
+                bLowerT.grid(row=0, column = 0)
+                bUpperT = Button(tModFrame, text="+")
+                bUpperT.grid(row=0, column = 1)
                 for skill in t.skills:
                     sLabel = Label(tFrame, text = "{0} - {1}".format(skill.name, skill.level))
                     sLabel.pack(fill=X)
